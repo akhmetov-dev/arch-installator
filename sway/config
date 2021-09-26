@@ -39,10 +39,10 @@ output DP-1 mode 1680x1050@60Hz
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+ exec swayidle -w \
+          timeout 300 'swaylock -f -c 000000' \
+          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -225,5 +225,8 @@ workspace $ws4 output $monitor_2
 
 font pango: Jetbrains-Mono-Regular 10
 gaps inner 8
+
+bindsym Print exec grim -c 100 ~/Pictures/screen-"$(date +%s)".png
+bindsym $mod+Print exec grim -g "$(slurp)" -c 100 ~/Pictures/screen-"$(date +%s)".png
 
 include /etc/sway/config.d/*
