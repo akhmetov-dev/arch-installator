@@ -29,7 +29,8 @@ window#waybar {
 #disk,
 #tray,
 #custom-GreatPhrase,
-#custom-weather {
+#custom-weather,
+#custom-wkblayout {
 	background: #1a1a1a;
 }
 
@@ -57,6 +58,7 @@ window#waybar {
 #battery,
 #disk,
 #custom-GreatPhrase,
-#custom-weather {
+#custom-weather,
+#custom-wkblayout {
 	padding: 0 10px;
 }

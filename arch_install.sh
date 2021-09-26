@@ -8,7 +8,7 @@ mkdir ~/Pictures
 echo Done.
 
 echo Installing packages...
-sudo pacman -S man neofetch alsa-utils alsa-plugins firefox unzip wofi waybar lightdm lightdm-gtk-greeter nemo telegram-desktop okular speedtest-cli mako
+sudo pacman -S man neofetch alsa-utils alsa-plugins firefox unzip wofi waybar lightdm lightdm-gtk-greeter nemo telegram-desktop okular speedtest-cli mako jq
 # Copy sway config files
 mkdir ~/.config/sway
 cp sway/config ~/.config/sway

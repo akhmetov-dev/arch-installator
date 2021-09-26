@@ -35,6 +35,9 @@
 		"custom/left-arrow-dark",
 		"disk",
 		"custom/left-arrow-light",
+                "custom/left-arrow-dark",
+		"custom/wkblayout",
+		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
 		"tray"
 	],
@@ -48,6 +51,12 @@
 		"return-type": "json",
 		"exec": "~/.config/waybar/modules/weather.sh",
 		"exec-if": "ping wttr.in -c1"
+	},
+
+	"custom/wkblayout": {
+		"format": "{}",
+		"exec": "swaymsg -mrt subscribe '[\"input\"]' | jq -r --unbuffered \"select(.change == \\\"xkb_layout\\\") | .input | select(.type == \\\"keyboard\\\") | .xkb_active_layout_name | .[0:2]\"",
+		"tooltip": "false"
 	},
 
 	"custom/left-arrow-dark": {
