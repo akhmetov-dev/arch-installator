@@ -8,7 +8,7 @@ mkdir ~/Pictures
 echo Done.
 
 echo Installing packages...
-sudo pacman -S man neofetch alsa-utils alsa-plugins firefox unzip wofi waybar lightdm lightdm-gtk-greeter nemo telegram-desktop okular speedtest-cli mako jq
+sudo pacman -S man neofetch alsa-utils alsa-plugins firefox unzip wofi waybar lightdm lightdm-gtk-greeter nemo telegram-desktop okular speedtest-cli mako jq vlc code jdk11-openjdk
 # Copy sway config files
 mkdir ~/.config/sway
 cp sway/config ~/.config/sway
@@ -42,3 +42,7 @@ echo ru_RU.UTF-8 >> /etc/locale.gen
 locale-gen
 ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 hwclock --systohc --utc
+
+#after installing Intellij (while they do not fix work application with wayland), type _JAVA_AWT_WM_NONREPARENTING=1 && idea
+echo 'export PATH=$PATH:/opt/idea-IU-212.5284.40/bin' >> ~/.bashrc
+echo 'export _JAVA_AWT_WM_NONREPARENTING=1' >> ~/.bashrc

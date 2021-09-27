@@ -1,0 +1,7 @@
+{
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontSize": 15,
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "JetBrains Mono",
+    "terminal.integrated.fontSize": 15
+}
