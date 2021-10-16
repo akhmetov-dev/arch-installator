@@ -99,3 +99,13 @@ source $OSH/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
+export _JAVA_AWT_WM_NONREPARENTING=1
+wmname LG3D
+
+#Let launch bash files without typing .sh in the end
+command_not_found_handle () {
+   unset -f command_not_found_handle
+   cmmnd="$1".sh
+   shift
+   exec "$cmmnd" "$@"
+}

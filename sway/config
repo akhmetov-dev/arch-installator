@@ -19,7 +19,9 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu wofi --show run
+#set $menu wofi --show run
+set $menu wofi --show drun
+#set $menu wofi --show dmenu
 
 ### Output configuration
 #
@@ -231,5 +233,9 @@ bindsym $mod+Print exec grim -g "$(slurp)" ~/Pictures/screen-"$(date +%s)".png -
 
 bindsym XF86AudioRaiseVolume exec amixer set Master playback 5+
 bindsym XF86AudioLowerVolume exec amixer set Master playback 5-
+
+#exec telegram-desktop
+
+exec telegram-desktop && sway '[app_id="telegram-desktop"]' move container to workspace 4
 
 include /etc/sway/config.d/*

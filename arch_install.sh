@@ -8,7 +8,7 @@ mkdir ~/Pictures
 echo Done.
 
 echo Installing packages...
-sudo pacman -S man neofetch alsa-utils alsa-plugins firefox unzip wofi waybar lightdm lightdm-gtk-greeter nemo telegram-desktop okular speedtest-cli mako jq vlc code jdk11-openjdk
+sudo pacman -S man neofetch alsa-utils alsa-plugins firefox unzip wofi waybar lightdm lightdm-gtk-greeter nemo telegram-desktop okular speedtest-cli mako jq vlc code jdk11-openjdk wmname discord
 # Copy sway config files
 mkdir ~/.config/sway
 cp sway/config ~/.config/sway
@@ -43,6 +43,17 @@ locale-gen
 ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 hwclock --systohc --utc
 
-#after installing Intellij (while they do not fix work application with wayland), type _JAVA_AWT_WM_NONREPARENTING=1 && idea
-echo 'export PATH=$PATH:/opt/idea-IU-212.5284.40/bin' >> ~/.bashrc
-echo 'export _JAVA_AWT_WM_NONREPARENTING=1' >> ~/.bashrc
+# Discord - Громкость микрофона - 75%
+
+#Yet another yogurt
+pacman -S --needed git base-devel
+cd Download
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ~
+
+yay zoom
+# select 4
+
+yay skype
